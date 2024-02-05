@@ -51,7 +51,7 @@ public class UserRepository {
     }
 
     /**
-     * Update user by id
+     * Select user by id
      *
      * @param id user id
      */
@@ -68,5 +68,16 @@ public class UserRepository {
             }
         };
         return jdbc.queryForObject(sql, rowMapper, id);
+    }
+
+    /**
+     * Update user
+     *
+     * @param user
+     */
+    public User update(User user) {
+        String sql = "UPDATE userTable SET firstName=?, lastName=? WHERE id=?";
+        jdbc.update(sql, user.getFirstName(), user.getLastName(), user.getId());
+        return user;
     }
 }
