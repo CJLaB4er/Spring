@@ -6,6 +6,8 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.List;
 
 @Repository
@@ -35,7 +37,7 @@ public class UserRepository {
     public User save(User user) {
         String sql = "INSERT INTO userTable (firstName,lastName) VALUES ( ?, ?)";
         jdbc.update(sql, user.getFirstName(), user.getLastName());
-        return  user;
+        return user;
     }
 
     /**
@@ -46,5 +48,25 @@ public class UserRepository {
     public void deleteById(int id) {
         String sql = "DELETE FROM userTable WHERE id=?";
         jdbc.update(sql, id);
+    }
+
+    /**
+     * Update user by id
+     *
+     * @param id user id
+     */
+    public User getOne(int id) {
+        String sql = "SELECT * FROM userTable WHEWE id=?";
+        RowMapper<User> rowMapper = new RowMapper<User>() {
+            @Override
+            public User mapRow(ResultSet rs, int rowNum) throws SQLException {
+                User user = new User();
+                user.setId(rs.getInt("id"));
+                user.setFirstName(rs.getString("firstName"));
+                user.setLastName(rs.getString("lastName"));
+                return user;
+            }
+        };
+        return jdbc.queryForObject(sql, rowMapper, id);
     }
 }
