@@ -56,7 +56,7 @@ public class UserRepository {
      * @param id user id
      */
     public User getOne(int id) {
-        String sql = "SELECT * FROM userTable WHEWE id=?";
+        String sql = "SELECT * FROM userTable WHERE id=?";
         RowMapper<User> rowMapper = new RowMapper<User>() {
             @Override
             public User mapRow(ResultSet rs, int rowNum) throws SQLException {
