@@ -15,4 +15,8 @@ public class MainController {
     public String cats(){
         return "cats.html";
     }
+
+    @RequestMapping("/mypage")
+    public String myPage(){
+        return "mypage.html";}
 }

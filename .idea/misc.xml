@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$/Seminar1/example3sem1" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/Seminar1/example1sem1/myapp/pom.xml" />
+        <option value="$PROJECT_DIR$/Seminar1/example2sem1/pom.xml" />
+        <option value="$PROJECT_DIR$/Seminar2/empl4sem2CRUD/pom.xml" />
+        <option value="$PROJECT_DIR$/Seminar2/Eml1Sem1SpringCore/pom.xml" />
+        <option value="$PROJECT_DIR$/Seminar2/Exml2Sem2SpringCore/pom.xml" />
+        <option value="$PROJECT_DIR$/Seminar2/Exml3Sem2SpringCore/pom.xml" />
+        <option value="$PROJECT_DIR$/Seminar3/examole1sem3/pom.xml" />
+        <option value="$PROJECT_DIR$/Seminar3/example2sem3/pom.xml" />
+        <option value="$PROJECT_DIR$/Seminar3/example3sem3hometask/pom.xml" />
+      </list>
+    </option>
+    <option name="workspaceImportForciblyTurnedOn" value="true" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="jbr-17" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>
