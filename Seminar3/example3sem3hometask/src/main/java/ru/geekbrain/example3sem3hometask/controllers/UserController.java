@@ -14,12 +14,26 @@ public class UserController {
     private RegistrationService service;
 
     @GetMapping
-    public List<User> userList() { return service.getDataProcessingService().getRepository().getUsers(); }
+    public List<User> userList() {
+        return service.getDataProcessingService().getRepository().getUsers();
+    }
 
     @PostMapping("/body")
-    public String userAddFromBody(@RequestBody User user)
-    {
+    public String userAddFromBody(@RequestBody User user) {
         service.getDataProcessingService().getRepository().getUsers().add(user);
         return "User added from body!";
     }
+
+    // Добавление стандартного юзера, через метод processRegistration с параметрами
+    @PostMapping("/standart")
+    public String addStandartUser() {
+
+        service.getDataProcessingService()
+                .getRepository()
+                .getUsers()
+                .add(service.processRegistration("User", 18, "user@mail.com"));
+        return "Standart User added!";
+    }
+
+    ;
 }
