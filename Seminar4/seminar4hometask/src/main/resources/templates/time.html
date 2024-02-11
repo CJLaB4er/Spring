@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Current time</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h2>Текущая дата: <label th:text="${currentDate}"></label></h2>
+<h2>Текущее время:
+    <th:block th:text="${currentTime}"></th:block>
+</h2>
+</body>
+</html>
