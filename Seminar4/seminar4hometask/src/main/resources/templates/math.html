@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Math</title>
+</head>
+<body>
+<h2>Площадь окружности</h2>
+<th:block th:text="${square}"><label></label></th:block>
+<form action="/math" method="post">
+    Radius m: <input type="number" name="radius"><br/>
+    <button type="submit">рассчитать</button>
+</form>
+</body>
